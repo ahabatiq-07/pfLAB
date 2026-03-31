@@ -1,16 +1,15 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
 
-float area,length,width;
-
-cout<<"enter the length of the rectangle :";
-cin>>length;
-
-cout<<"enter the width of the rectangle :";
-cin>>width;
-
-area= length * width;
-
-cout<<"the area of rectangle is :"<<area;
+int main() {
+    int num = 1, sum = 0;
+    
+    while(num <= 100) {
+        sum += num; 
+        num++;     
+    }
+    
+    cout << "Sum: " << sum << endl;
+    
+    return 0;
 }

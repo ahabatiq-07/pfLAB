@@ -1,13 +1,12 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
 
-float lb= 0.45;
-float pounds;
-cout<<"enter weight in pounds:";
-cin>>pounds;
-
-float kilograms;
-kilograms = pounds * lb;
-cout<< pounds <<" pounds "<<" is equal to "<< kilograms <<" kilograms ";
-} 
+int main() {
+    cout << "Counting (1-10)" << endl;
+    
+    for(int i = 1; i <= 10; i++) {
+        cout << i << endl;
+    }
+    
+    return 0;
+}

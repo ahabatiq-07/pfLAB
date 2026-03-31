@@ -1,26 +1,28 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
 
-int win=3;
-int draw=1;
-int loss=0;
-int wins, draws, losses, total;
-cout<<"enter the number of wins: ";
-cin>>wins;
+int main() {
+    int number, count = 0;
+    
+    cout << "Enter a number: ";
+    cin >> number;
 
-wins=wins * win;
+    if(number < 0) {
+        number = -number;
+    }
 
-cout<<"enter the number of draws: ";
-cin>>draws;
+    if(number == 0) {
+        count = 1;
+    }
+    else {
 
-draws=draws * draw;
-
-cout<<"enter the number of losses: ";
-cin>>losses; 
-
-losses=losses * loss;
-total=wins+draws+losses;
-
-cout<<"Pakistan has obtained "<<total<<" in Asia Cup Tornamesnt";
+        while(number > 0) {
+            number = number / 10;
+            count++;
+        }
+    }
+    
+    cout << "Total number of digits: " << count << endl;
+    
+    return 0;
 }

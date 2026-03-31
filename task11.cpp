@@ -1,20 +1,28 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
 
-int population ;
-cout<<"enter the current world population : "; 
-cin>>population ;
+int main() {
+    int num1, num2, a, b, temp;
 
-int monthlybirthrate;
-cout<<"enter the monthly birth rate (number of birth per month) : " ;
-cin>>monthlybirthrate ;
-
-int yearlyBR ; 
-yearlyBR= monthlybirthrate * 12 ;
-
-int threedecades ;
-threedecades= (yearlyBR * 30) + population ;
-
-cout<<" population in three decades will be "<<threedecades ;
+    cout << "Enter the first number: ";
+    cin >> num1;
+    cout << "Enter the second number: ";
+    cin >> num2;
+    
+    a = num1;
+    b = num2;
+    
+    while(b != 0) {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+    
+    int gcd = a;
+    int lcm = (num1 * num2) / gcd;
+    
+    cout << "GCD: " << gcd << endl;
+    cout << "LCM: " << lcm << endl;
+    
+    return 0;
 }

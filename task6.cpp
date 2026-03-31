@@ -1,12 +1,15 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
-float hours,seconds;
 
-cout<<"enter the number of hours: ";
-cin>>hours;
+int main() {
+    int num;
+    
+    cout << "Enter a number: ";
+    cin >> num;
 
-seconds= hours * 3600;
-cout<<hours<<" hours"<<" is equivalent to "<< seconds<<" seconds";
+    for(int i = 1; i <= 10; i++) {
+        cout << num << " x " << i << " = " << num * i << endl;
+    }
+    
+    return 0;
 }
- 

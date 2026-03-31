@@ -1,18 +1,17 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
 
-int imposter;
-float player;
-
-cout<<" Enter Imposter Count: ";
-cin>>imposter;
-
-cout<<" Enter Player Count: ";
-cin>>player;
-
-int chance;
-
-chance=(imposter/player) * 100 ;
-cout<<"Chance of being an imposter: "<<chance<<"%";
+int main() {
+    int rows = 5;
+    
+    for(int i = 1; i <= rows; i++) {
+        
+        for(int j = rows; j >= rows - i + 1; j--) {
+            cout << j << " ";
+        }
+        
+        cout << endl;
+    }
+    
+    return 0;
 }

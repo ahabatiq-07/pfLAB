@@ -1,19 +1,16 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
 
-int InitialVelocity, Acceleration, Time, FinalVelocity;
+int main() {
+    
+    for(int i = 1; i <= 3; i++) {
 
-cout<<"Enter Initial Velocity (m/s): ";
-cin>>InitialVelocity;
-
-cout<<"Acceleration (m/s^2): ";
-cin>>Acceleration;
-
-cout<<"Enter Time (s): ";
-cin>>Time;
-
-FinalVelocity= InitialVelocity + Acceleration * Time;
-
-cout<<"Final Velocity(m/s): "<<FinalVelocity;
+        for(int j = 1; j <= 3; j++) {
+            cout << j << " ";
+        }
+        
+        cout << endl;
+    }
+    
+    return 0;
 }

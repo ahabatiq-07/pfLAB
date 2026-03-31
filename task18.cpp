@@ -1,12 +1,16 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
-int n;
-cout<<"Enter the number of sides of the polygon: ";
-cin>>n;
 
-int polygon;
-polygon= (n-2) * 180;
+int main() {
+    
+    for(int i = 1; i <= 3; i++) {
 
-cout<<"The total sum of interal angles of a/ : "<<n<<"-sided polygon is: "<<polygon<<" degrees";
+        for(int j = 1; j <= 3; j++) {
+            cout << "* ";
+        }
+
+        cout << endl;
+    }
+    
+    return 0;
 }

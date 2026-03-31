@@ -1,15 +1,29 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
 
-int year1=365;
-
-int years,days;
-
-cout<<"enter your age in years:";
-cin>>years;
-
-days= years * year1;
-cout<<"your age in days is approximately:"<< days<<"days";
+int main() {
+    int length;
+    int first = 0, second = 1, next;
+    
+    cout << "Enter the length of the Fibonacci series: ";
+    cin >> length;
+    
+    if(length >= 1) {
+        cout << first;  
+    }
+    
+    if(length >= 2) {
+        cout << ", " << second;  
+    }
+    
+    for(int i = 3; i <= length; i++) {
+        next = first + second;
+        cout << ", " << next;
+        first = second;
+        second = next;
+    }
+    
+    cout << endl;
+    
+    return 0;
 }
-

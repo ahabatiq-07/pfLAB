@@ -1,20 +1,11 @@
 #include<iostream>
 using namespace std;
-main()
-{
- float weight;
-cout<<" Enter weight of the fertilizer bag (in pounds):";
-cin>>weight;
-float bagcost;
-cout<<" Enter the cost price of the bag ($):";
-cin>>bagcost;
-float area;
-cout<<" Enter the size of the area bag can cover:";
-cin>>area;
-float costperpound;
-costperpound = bagcost / weight ;
-cout<<" Cost of fertilizer per pound: $"<<costperpound <<endl;
-float costpersquarefoot;
-costpersquarefoot = bagcost / area ;
-cout<<" Cost of fertilizer per square foot is : $"<<costpersquarefoot;
+main(){
+    int salary, advance, months;
+    cout<<"Enter your salary: ";
+    cin>>salary;
+    advance= salary * 6 * 0.5 ;
+    if(advance >= 50000) {  cout<<"You can buy Laptop"; }
+    months = 50000 * 2 / salary;
+    cout<<"Months required to buy laptop"<<months;
 }

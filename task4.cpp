@@ -1,16 +1,14 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-main(){
 
-float charge, time, current;
-
-cout<<"enter the charge (Q) in coulombs:";
-cin>> charge;
-
-cout<<"enter the time (t) in seconds:";
-cin>> time;
-
-current=charge/time;
-cout<<"the current(I) is:"<<current;
+int main() {
+    int sum = 0;
+    
+    for (int i = 1; i <= 5; i++) {
+        sum = sum + i;
+    }
+    
+    cout << "Sum of first 5 natural numbers = " << sum << endl;
+    
+    return 0;
 }
-
