@@ -1,34 +1,19 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
+int main(){
+    cout<<" Enter a character: ";
+char letter;
+cin>>letter;
 
-int main() {
-    int number, digit, count = 0;
-    int lastDigit;
-    
-    cout << "Enter a number: ";
-    cin >> number;
-    cout << "Enter the digit to check: ";
-    cin >> digit;
-    
-    if(number < 0) {
-        number = -number;
+return 0;
+}
+int checkAlphabetCase(char letter){
+    if (letter >= 'A' && letter <= 'Z') {
+        cout << "The character is an uppercase letter." << endl;
+    } else if (letter >= 'a' && letter <= 'z') {
+        cout << "The character is a lowercase letter." << endl;
+    } else {
+        cout << "The character is not an alphabet letter." << endl;
     }
-    
-    if(number == 0 && digit == 0) {
-        count = 1;
-    }
-    else {
-        
-        while(number > 0) {
-            lastDigit = number % 10;  
-            if(lastDigit == digit) {
-                count++;
-            }
-            number = number / 10;  
-        }
-    }
-    
-    cout << "Frequency: " << count << endl;
-    
     return 0;
 }

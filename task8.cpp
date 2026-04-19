@@ -1,28 +1,20 @@
-#include <iostream>
+#include<iostream>
+
 using namespace std;
+int myFunction(int num1);
+int main(){
+    int num1;
+    cout<<" Enter a number: ";
+    cin>>num1;
 
-int main() {
-    int number, count = 0;
-    
-    cout << "Enter a number: ";
-    cin >> number;
-
-    if(number < 0) {
-        number = -number;
-    }
-
-    if(number == 0) {
-        count = 1;
-    }
-    else {
-
-        while(number > 0) {
-            number = number / 10;
-            count++;
-        }
-    }
-    
-    cout << "Total number of digits: " << count << endl;
-    
+   int result = myFunction(num1);
     return 0;
 }
+int myFunction(int num1){
+    int total;
+    total = num1 * 5;
+    cout<<" The result is: " << total;
+    return total;
+
+}
+   

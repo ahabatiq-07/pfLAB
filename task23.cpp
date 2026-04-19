@@ -1,11 +1,11 @@
 #include<iostream>
+#include <cmath>
 using namespace std;
-main(){
-    int salary, advance, months;
-    cout<<"Enter your salary: ";
-    cin>>salary;
-    advance= salary * 6 * 0.5 ;
-    if(advance >= 50000) {  cout<<"You can buy Laptop"; }
-    months = 50000 * 2 / salary;
-    cout<<"Months required to buy laptop"<<months;
+int main(){
+    int num1;
+    
+    cout<<" Enter a number: ";
+    cin>>num1;
+    cout<<" The square root of "<< num1 <<" is " << sqrt(num1);
+    return 0;   
 }

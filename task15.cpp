@@ -1,46 +1,36 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-
-int main() {
-    int choice;
-    
-    while(true) {
-        
-        cout << "--- Restaurant Management System ---" << endl;
-        cout << "1. View Food Menu" << endl;
-        cout << "2. Place Order" << endl;
-        cout << "3. View Order Status" << endl;
-        cout << "4. Generate Bill" << endl;
-        cout << "5. Contact Staff" << endl;
-        cout << "6. Exit" << endl;
-        cout << "Enter your choice (1-6): ";
-        cin >> choice;
-        
-        if(choice == 1) {
-            cout << "You selected: View Food Menu." << endl;
-        }
-        else if(choice == 2) {
-            cout << "You selected: Place Order." << endl;
-        }
-        else if(choice == 3) {
-            cout << "You selected: View Order Status." << endl;
-        }
-        else if(choice == 4) {
-            cout << "You selected: Generate Bill." << endl;
-        }
-        else if(choice == 5) {
-            cout << "You selected: Contact Staff." << endl;
-        }
-        else if(choice == 6) {
-            cout << "Exiting Restaurant Management System. Thank you!" << endl;
-            break;  
-        }
-        else {
-            cout << "Invalid choice! Please enter a number between 1-6." << endl;
-        }
-        
-        cout << endl;  
-    }
-    
+float calculatePoolState(float volume, float flow1, float flow2, float hours);
+int main(){
+    float volume, flow1, flow2, hours;
+    cout<<"Enter volume of the pool: ";
+    cin>>volume;
+    cout<<"Enter flow rate of the first pipe per hour: ";
+    cin>>flow1;
+    cout<<"Enter flow rate of the second pipe per hour: ";
+    cin>>flow2;
+    cout<<"Enter hours that the worker is absent: ";
+    cin>>hours;
+    calculatePoolState(volume, flow1, flow2, hours);
     return 0;
+}
+    //total water = (p1 + p2) * H 
+    float calculatePoolState(float volume, float flow1, float flow2, float hours){
+
+    
+    float totalWater = (flow1 + flow2) * hours;
+    if (totalWater <= volume){
+        float PoolFilled = (totalWater / volume) * 100;
+        float p1Contribution = (flow1 * hours / totalWater) * 100;
+        float p2Contribution = (flow2 * hours / totalWater) * 100;
+        cout<<"The pool is "<<PoolFilled<<"% full. "<<endl;
+        cout<<"Pipe 1 contributed "<<p1Contribution<<"% of the water."<<endl
+            <<"Pipe 2 contributed "<<p2Contribution<<"% of the water."<<endl;
+    }
+    if (totalWater > volume){
+        float overflow = totalWater - volume;
+        cout<<"The pool is overflowing with "<<overflow<<" liters of water."<<endl;
+    }
+     
+    
 }

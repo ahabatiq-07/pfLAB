@@ -1,12 +1,13 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-int main() {
-    cout << "Counting (1-10)" << endl;
-    
-    for(int i = 1; i <= 10; i++) {
-        cout << i << endl;
-    }
-    
+int main(){
+    int number1, number2;
+    cout<<" Enter first number: "<<endl;
+    cin>>number1;
+    cout<<" Enter second number: "<<endl;
+    cin>>number2;
+    cout<<" Greater Number: " << max(number1, number2);
     return 0;
 }

@@ -1,14 +1,13 @@
-#include <iostream>
+#include<iostream>
+#include <cmath>
 using namespace std;
 
-int main() {
-    int sum = 0;
-    
-    for (int i = 1; i <= 5; i++) {
-        sum = sum + i;
-    }
-    
-    cout << "Sum of first 5 natural numbers = " << sum << endl;
-    
+int main(){
+    int number1, number2;
+    cout<<" Enter first number: "<<endl;
+    cin>>number1;
+    cout<<" Enter second number: "<<endl;
+    cin>>number2;
+    cout<<" Minimum Number: " << min(number1, number2);
     return 0;
 }

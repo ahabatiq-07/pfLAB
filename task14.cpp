@@ -1,37 +1,30 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
-int main() {
-    double money;
-    int targetYear;
-    int age = 18;  
 
-    cout << "Enter inherited money: ";
-    cin >> money;
-    cout << "Enter year until which to live: ";
-    cin >> targetYear;
+void timetravel(int num1, int num2);
+
+int main() {
+    cout << "Time in hours: ";
+    int num1;
+    cin >> num1;
     
-    double remainingMoney = money;
+    cout << "Time in min: ";
+    int num2;
+    cin >> num2;
     
-    for(int year = 1800; year <= targetYear; year++) {
-        if(year % 2 == 0) {  
-            remainingMoney -= 12000;
-        }
-        else if(year % 2 != 0) {  
-            remainingMoney -= (12000 + 50 * age);
-        }
-        age++;  
-    }
-    
-    cout << fixed << setprecision(2);
-    if(remainingMoney >= 0) {
-        cout << "Yes! He will live a carefree life and will have " 
-             << remainingMoney << " dollars left." << endl;
-    }
-    else if(remainingMoney < 0) {
-        cout << "He will need " << -remainingMoney << " dollars to survive." << endl;
-    }
-    
+    timetravel(num1, num2);
     return 0;
+}
+
+void timetravel(int num1, int num2) {
+    int totalMinutes = num2 + 15;
+    
+    
+    int extraHours = totalMinutes / 60;
+    int remainingMins = totalMinutes % 60;
+    int finalHours = num1 + extraHours;
+
+    
+    cout << "Time after 15 min: " << finalHours << " hours and " << remainingMins << " min" << endl;
 }

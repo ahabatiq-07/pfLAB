@@ -1,24 +1,31 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
+int main(){
+    bool isSymmetrical(int num1);
+    int num1;
 
-int main() {
-    int number, sum = 0;
-    int digit;
+   cout<<" Enter a three-digit number: ";
+    cin>>num1;
+   bool ans = isSymmetrical(num1);
+   return 0;
+}
+bool isSymmetrical(int num1) {
+    
+    int firstDigit = num1 / 100; 
+    int lastDigit = num1 % 10;   
+    bool result;
 
-    cout << "Enter a number: ";
-    cin >> number;
-    
-    if(number < 0) {
-        number = -number;
+    if (firstDigit == lastDigit) {
+        result = true;
+    } else {
+        result = false;
     }
-    
-    while(number > 0) {
-        digit = number % 10;  
-        sum = sum + digit;     
-        number = number / 10;   
+
+    if (result) {
+        cout << "The number is symmetrical." << endl;
+    } else {
+        cout << "The number is not symmetrical." << endl;
     }
-    
-    cout << "Sum of digits: " << sum << endl;
-    
-    return 0;
+
+    return result;
 }
